@@ -22,8 +22,8 @@ export default function Home({ results }) {
 export async function getServerSideProps(context) {
   const genre = context.query.genre;
   const request = await fetch(
-    "https://api.themoviedb.org/3" + requests[genre]?.url ||
-      "https://api.themoviedb.org/3" + requests.fetchAnimation?.url
+    // "https://api.themoviedb.org/3" + requests[genre]?.url ||
+    "https://api.themoviedb.org/3" + requests.fetchAnimation?.url
   ).then((res) => res.json());
   return {
     props: {
